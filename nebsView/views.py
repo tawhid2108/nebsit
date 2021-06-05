@@ -20,7 +20,8 @@ def HomeViews(request):
         form = ClientForm(request.POST)
         if form.is_valid():
             form.save()
-            return HttpResponseRedirect('?submitted = True')
+            #return HttpResponseRedirect('?submitted = True')
+            return redirect(reverse('home'))
     else:
                     
         form = ClientForm()
