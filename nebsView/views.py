@@ -4,7 +4,7 @@ from django.urls import reverse_lazy, reverse
 from django.shortcuts import render, get_object_or_404
 #from django.contrib.auth.forms import UserCreationForm, UserChangeForm
 from django.views import generic
-#from .forms import ClientForm
+from .forms import ClientForm
 from .models import Client
 
 
@@ -15,7 +15,7 @@ from .models import Client
 
 
 def HomeViews(request):
-    '''submitted = False
+    submitted = False
     if request.method == "POST":
         form = ClientForm(request.POST)
         if form.is_valid():
@@ -27,10 +27,10 @@ def HomeViews(request):
         form = ClientForm()
 
         context = {
-            #'form' : form,
-           # 'submitted' : submitted,
-            }'''
-    return render (request, 'index.html')   
+            'form' : form,
+           'submitted' : submitted,
+            }
+    return render (request, 'index.html', context)   
 
 
 
