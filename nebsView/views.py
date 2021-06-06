@@ -40,8 +40,8 @@ def HomeViews(request):
     #model = ShowDataModel
     template_name = 'index.html' '''
 
-def AboutViews(request):
-    return render (request, 'about.html')     
+def ThanksViews(request):
+    return render (request, 'thank-u.html')     
 
 
 def ServiceViews(request):
